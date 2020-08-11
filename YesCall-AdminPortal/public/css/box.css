@@ -1,0 +1,144 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.box-model img{
+    width: 135px;
+    height: 135px;
+    border-radius: 100%;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}
+
+
+
+
+
+.box-model .modal-header{
+
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.box-model .mirco{
+    background-color:green;
+    color:white;
+    width:19%;
+    border-radius:200px;
+    border:none;
+    height:43px;
+    transition:0.7s;
+    margin-right:30px
+}
+.box-model .volume{
+    background-color:red;
+    color:white;
+    width:19%;
+    border-radius:200px;
+    border:none;
+    height:43px;
+    transition:0.7s;
+}
+.mirco:hover{
+    background-color:white;
+    color:black;
+    border:2px solid green;
+    transition:0.7s;
+
+}
+.volume:hover{
+    background-color:white;
+    color:black;
+    border:2px solid red;
+    transition:0.7s;
+
+}
+
+span{
+    font-weight:600;
+
+}
+.num{
+    margin-left:70px
+}
+.num-2{
+    margin-left:-70px
+}
+.btn-close {
+    border:none;
+    width:15%;
+
+    background-color:orange;
+    height:35px;
+    color:White;
+    border-radius:6px;
+    transition:0.7s;
+
+}
+.btn-close:hover{
+    background-color:white;
+    color:black;
+    border:2px solid orange;
+    transition:0.7s;
+
+}
+button:focus{
+    outline:0;
+}
+.call-animation {
+    background: 	rgba(255,165,0,0.3);
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: solid 5px rgba(255,165,0,0.2);
+    animation: play 2s ease infinite;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+@keyframes play {
+
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        box-shadow: 0 0 0 5px rgba(255,127,80,0.4);
+    }
+    25% {
+        box-shadow: 0 0 0 10px rgba(255,127,80,0.5), 0 0 0 20px rgba(255,127,80,0.5);
+    }
+    25% {
+        box-shadow: 0 0 0 15px rgba(255,127,80,0.3), 0 0 0 30px rgba(255,127,80,0.3);
+    }
+
+}
+@media only screen and (max-width: 575px) {
+    .box-model .mirco{
+        background-color:green;
+        color:white;
+        width:10%;
+        border-radius:200px;
+        border:none;
+        height:43px;
+        transition:0.7s;
+        margin-right:30px
+    }
+    .box-model .volume{
+        background-color:red;
+        color:white;
+        width:10%;
+        border-radius:200px;
+        border:none;
+        height:43px;
+        transition:0.7s;
+    }
+
+}

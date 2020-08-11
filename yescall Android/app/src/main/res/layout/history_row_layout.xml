@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="center|top"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical"
+    android:background="@drawable/contact_list_border"
+
+
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image_view_contact_display"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/facebook_avatar"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="3dp" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="0.94"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_view_contact_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="Username"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/callButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="5dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.06"
+                    android:src="@drawable/phone" />
+
+                <ImageView
+                    android:id="@+id/messageButton"
+                    android:layout_width="30dp"
+                    android:layout_height="41dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+
+
+                    android:padding="2dp"
+                    android:src="@drawable/trash"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Status"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 minutes"
+                    android:textColor="@color/label_incoming" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:elevation="16dp"
+                    android:text="2 min ago"
+                    android:textColor="@color/label_5" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dial_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/contact_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/contact_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/divider" />
+
+</LinearLayout>

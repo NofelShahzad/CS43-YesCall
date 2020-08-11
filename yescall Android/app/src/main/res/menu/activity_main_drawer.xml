@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/credit"
+            android:icon="@drawable/credit"
+            android:title="Credit" />
+        <item
+            android:id="@+id/contacts"
+            android:icon="@drawable/usersmeting"
+            android:title="Contacts" />
+        <item
+            android:id="@+id/dailer"
+            android:icon="@drawable/dailer"
+            android:title="Dialer" />
+        <item
+            android:id="@+id/call_history"
+            android:icon="@drawable/history"
+            android:title="Call History" />
+        <item
+            android:id="@+id/add_contact"
+            android:icon="@drawable/add"
+            android:title="Add Contact" />
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_share_item"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_rates"
+                android:icon="@drawable/rates"
+                android:title="Check Rates" />
+            <item
+                android:id="@+id/nav_buy_credit"
+                android:icon="@drawable/money"
+                android:title="Buy Credit" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Sign Out" />
+        </menu>
+    </item>
+
+</menu>

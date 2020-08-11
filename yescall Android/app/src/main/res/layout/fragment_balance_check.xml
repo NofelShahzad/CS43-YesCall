@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yescall.yescall.BalanceCheck"
+    android:background="@drawable/bg"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        card_view:cardCornerRadius="40dp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Balance"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center|top"
+            android:textSize="40dp"
+            android:textColor="@color/colorPrimary"
+            />
+        <TextView
+            android:text="0.00 $"
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/balance"
+
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif"
+            android:textSize="40dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

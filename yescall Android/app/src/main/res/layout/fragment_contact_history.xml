@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yescall.yescall.contact_history"
+    android:background="@drawable/bg"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="0.74"
+        android:alwaysDrawnWithCache="true"
+        android:animateLayoutChanges="true"
+
+        android:animationCache="true"
+        android:dividerHeight="10dp"
+        android:minHeight="220dp"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="16dp"
+         tools:listitem="@layout/history_row_layout"
+          />
+</FrameLayout>

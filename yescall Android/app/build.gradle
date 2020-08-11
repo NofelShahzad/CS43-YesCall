@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+ext.playCustomRingback = {
+    def playCustomRingback = System.getenv("playCustomRingback");
+
+    if (playCustomRingback == null) {
+        logger.log(LogLevel.INFO, "Could not locate playCustomRingback environment variable. " +
+                "Trying local.properties")
+        Properties properties = new Properties()
+        if (project.rootProject.file('local.properties').exists()) {
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            playCustomRingback = properties.getProperty('playCustomRingback')
+        }
+    }
+
+    if (playCustomRingback == null) {
+        playCustomRingback = false
+    }
+
+    return playCustomRingback;
+}
+
+android {
+    compileSdkVersion 28
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    defaultConfig {
+        applicationId "com.twilio.voice.quickstart"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+            buildConfigField("boolean", "playCustomRingback", "${playCustomRingback()}")
+        }
+        debug {
+            buildConfigField("boolean", "playCustomRingback", "${playCustomRingback()}")
+        }
+    }
+
+    // Specify that we want to split up the APK based on ABI
+    splits {
+        abi {
+            // Enable ABI split
+            enable true
+
+            // Clear list of ABIs
+            reset()
+
+            // Specify each architecture currently supported by the Video SDK
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+
+            // Specify that we do not want an additional universal SDK
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:support-v4:25.3.1'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta4'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:26.1.0'
+
+    implementation 'com.koushikdutta.ion:ion:2.1.6'
+    implementation 'net.rimoto:intlphoneinput:1.0.1'
+    implementation 'com.twilio:voice-android:3.1.2'
+    implementation 'com.hbb20:ccp:2.1.9'
+    implementation 'com.jakewharton:butterknife:6.1.0'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation 'com.google.android.gms:play-services-base:17.2.1'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    implementation 'com.android.volley:volley:1.1.1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife:6.1.0'
+    androidTestImplementation 'junit:junit:4.12'
+    implementation 'com.google.firebase:firebase-messaging:20.1.4'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'org.jetbrains:annotations:15.0'
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.yescall.yescall.ScrollActivity"
+    tools:showIn="@layout/activity_scroll">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+      <net.rimoto.intlphoneinput.IntlPhoneInput
+
+          android:id="@+id/phoneNumber"
+
+          android:layout_marginLeft="15dp"
+
+          android:layout_marginTop="15dp"
+
+          android:layout_marginBottom="20dp"
+
+          android:layout_marginRight="15dp"
+
+          android:layout_centerVertical="true"
+
+          android:layout_width="match_parent"
+
+          android:layout_height="wrap_content"
+          android:paddingLeft="10dp"
+
+          android:ellipsize="start"
+
+          android:gravity="center"
+
+          android:hint="Enter Name"
+
+          android:inputType="text"
+
+          android:background="@drawable/textborder"/>
+      <EditText
+
+          android:id="@+id/inputName"
+
+          android:layout_marginLeft="15dp"
+
+          android:layout_marginTop="15dp"
+
+          android:layout_marginBottom="20dp"
+
+          android:layout_marginRight="15dp"
+
+          android:layout_centerVertical="true"
+
+          android:layout_width="match_parent"
+
+          android:layout_height="wrap_content"
+          android:padding="15dp"
+
+          android:ellipsize="start"
+
+          android:gravity="center"
+
+          android:hint="Enter Name"
+
+          android:inputType="text"
+
+          android:background="@drawable/textborder"/>
+
+      <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/add_contact_image1"
+          android:layout_width="wrap_content"
+          android:layout_height="100dp"
+
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:src="@drawable/facebook_avatar"
+          app:civ_border_color="@color/colorAccent"
+          app:civ_border_width="3dp" />
+
+      <Button
+          android:id="@+id/add_contact_button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="20dp"
+          android:layout_marginLeft="15dp"
+
+          android:layout_marginRight="15dp"
+
+          android:layout_marginTop="15dp"
+          android:background="@drawable/textborder"
+          android:elevation="19dp"
+          android:padding="10dp"
+
+          android:text="Add Contact"
+          android:textColor="@color/colorAccent" />
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

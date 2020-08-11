@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="com.yescall.yescall.SendMessage"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/country_code"
+
+        />
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="70dp"
+        android:foregroundGravity="top|left|center"
+        android:minHeight="224dp"
+        android:textDirection="inherit"
+        card_view:cardCornerRadius="40dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="33dp"
+            android:elevation="9dp"
+            android:text="923487347143"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+
+            />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/textborder"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Message Here"
+            android:lines="200"
+            android:maxLines="100"
+            android:paddingLeft="20dp"
+
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/sen_message"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="220dp"
+            android:background="@color/colorPrimary"
+            android:text="Send Message"
+            android:textColor="@color/colorAccent"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

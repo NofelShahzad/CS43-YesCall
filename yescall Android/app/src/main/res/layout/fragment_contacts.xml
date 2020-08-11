@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.yescall.yescall.Contacts">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="0.74"
+        android:alwaysDrawnWithCache="true"
+        android:animateLayoutChanges="true"
+
+        android:animationCache="true"
+        android:dividerHeight="10dp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+</FrameLayout>

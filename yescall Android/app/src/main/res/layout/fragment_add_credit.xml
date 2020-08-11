@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.yescall.yescall.AddCredit">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.08"
+        android:padding="@dimen/fastscroll__bubble_corner"
+        app:srcCompat="@drawable/i2i" />
+
+    <EditText
+
+        android:id="@+id/input_credit"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+
+        android:layout_marginBottom="20dp"
+
+        android:layout_marginLeft="15dp"
+
+        android:layout_marginRight="15dp"
+
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textborder"
+
+        android:ellipsize="start"
+
+
+        android:gravity="center"
+
+        android:hint="Request For Credit"
+
+        android:inputType="numberDecimal"
+
+        android:padding="15dp" />
+
+    <Button
+        android:id="@+id/add_credit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:layout_marginBottom="20dp"
+
+        android:layout_marginLeft="15dp"
+
+        android:layout_marginRight="15dp"
+
+        android:layout_marginTop="15dp"
+
+
+        android:layout_weight="0.03"
+        android:textColor="@color/colorAccent"
+
+        android:background="@color/colorPrimary"
+
+        android:ellipsize="start"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Buy Credit" />
+
+
+</LinearLayout>
